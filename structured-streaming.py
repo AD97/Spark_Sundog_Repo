@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Dec 18 09:15:05 2019
-
-@author: Frank
-"""
-
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 from pyspark.sql import Row, SparkSession
@@ -12,7 +6,7 @@ from pyspark.sql import Row, SparkSession
 from pyspark.sql.functions import regexp_extract
 
 # Create a SparkSession (the config bit is only for Windows!)
-spark = SparkSession.builder.config("spark.sql.warehouse.dir", "file:///C:/temp").appName("StructuredStreaming").getOrCreate()
+spark = SparkSession.builder.appName("StructuredStreaming").getOrCreate()
 
 # Monitor the logs directory for new log data, and read in the raw lines as accessLines
 accessLines = spark.readStream.text("logs")
