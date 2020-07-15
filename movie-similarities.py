@@ -10,6 +10,7 @@ def loadMovieNames():
             movieNames[int(fields[0])] = fields[1]
     return movieNames
 
+
 #Python 3 doesn't let you pass around unpacked tuples,
 #so we explicitly extract the ratings now.
 def makePairs( userRatings ):
