@@ -2,6 +2,7 @@ import sys
 from pyspark import SparkConf, SparkContext
 from math import sqrt
 
+
 #To run on EMR successfully + output results for Star Wars:
 #aws s3 cp s3://sundog-spark/MovieSimilarities1M.py ./
 #aws s3 sp c3://sundog-spark/ml-1m/movies.dat ./
